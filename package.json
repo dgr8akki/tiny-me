@@ -2,10 +2,10 @@
   "name": "tiny-me",
   "version": "1.0.0",
   "description": "",
-  "private": true,
+  "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",
-    "heroku-postbuild": "cd client && npm i && npm i --only=dev --no-shrinkwrap && npm run build",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "client": "cd client && npm start",
     "server": "nodemon server/index.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""

@@ -12,7 +12,7 @@ class App extends Component {
       .then(res => this.setState({
         response: res.message
       }))
-      .catch(err => console.log(err));
+      .catch(er => console.log(er));
   }
 
   callApi = async () => {
