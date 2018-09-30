@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
-import axios from "../../axios";
+import Layout from 'antd/lib/layout';
+import axios from '../../axios';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
+import Input from 'antd/lib/input';
 import ClipboardJS from 'clipboard/dist/clipboard.min';
+import Button from '../../components/Button';
+import SiteHeader from '../../components/SiteHeader';
+import SiteFooter from '../../components/SiteFooter';
+
+const { Header, Footer, Content } = Layout;
 
 class HomePage extends Component {
   constructor(props) {
@@ -37,29 +46,48 @@ class HomePage extends Component {
   }
   render() {
     return (
-      <div className="App">
-        <div>
-            <textarea
-              name="urlInput"
-              rows="4"
-              onChange={e => this.setLongURL(e.target.value)}
-              value={this.state.longUrl}
-              placeholder="Paste your link here"
-            />
-          <input id="foo" value={this.state.shortUrl} />
-          <button
-            id="copyBtn"
-            data-clipboard-target="#foo"
-          >
-            Copy To Clipboard
-          </button>
-          <button
-            className="more"
-            onClick={this.getShortUrl}>
-            Tiny me !!!
-          </button>
-        </div>
-      </div>
+      <Layout>
+        <Header>
+          <SiteHeader />
+        </Header>
+        <Content className="content">
+          <Row>
+            <Col span={24}>
+              <h3>
+                Transform your long link into tiny one :)
+              </h3>
+            </Col>
+            <Col>
+          <Input
+            name="urlInput"
+            onChange={e => this.setLongURL(e.target.value)}
+            value={this.state.longUrl}
+            placeholder="Paste your link here"
+          />
+              <Button
+                className="more"
+                onClick={this.getShortUrl}
+                text="Tiny me !!!"
+              />
+            </Col>
+            <Col span={24}>
+              <Input
+                id="foo"
+                value={this.state.shortUrl}
+              />
+              <button
+                id="copyBtn"
+                data-clipboard-target="#foo"
+              >
+                COPY
+              </button>
+            </Col>
+          </Row>
+        </Content>
+        <Footer>
+          <SiteFooter />
+        </Footer>
+      </Layout>
     );
   }
 }
