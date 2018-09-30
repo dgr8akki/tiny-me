@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Layout from 'antd/lib/layout';
 import axios from '../../axios';
 import Input from 'antd/lib/input';
+import message from 'antd/lib/message';
 import ClipboardJS from 'clipboard/dist/clipboard.min';
 import Button from '../../components/Button';
 import SiteHeader from '../../components/SiteHeader';
@@ -17,7 +18,10 @@ class HomePage extends Component {
       shortUrl : 'Get your link here',
     };
     this.clip = new ClipboardJS('#copyBtn');
-    this.clip.on('success', e => e.clearSelection());
+    this.clip.on('success', e => {
+      e.clearSelection();
+      message.success('Copied');
+    });
   }
 
   getShortUrl = async () => {
