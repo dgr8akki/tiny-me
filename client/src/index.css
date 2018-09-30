@@ -3,7 +3,7 @@
 }
 
 .content {
-  min-height: calc(100vh - 112px) !important;
+  min-height: calc(100vh - 130px) !important;
 }
 
 .header {
@@ -14,4 +14,94 @@
 .footer {
   background: black;
   width: 100%;
+}
+
+.shorten {
+  padding: 30px 0 45px;
+  color: white;
+  background-color: #366ed1;
+}
+
+.shortenResult {
+  padding: 30px 0 45px;
+  color: white;
+  background-color: #00e676;
+}
+
+.constrain {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.constrain h1 {
+  font-size: 30px;
+  font-weight: lighter;
+  cursor: default;
+  user-select: none;
+  color: #ffffff;
+}
+
+.inputLong {
+  width: calc(100% - 32px);
+  max-width: 550px;
+  height: 36px;
+  margin-right: 20px;
+  padding: 0 16px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 36px;
+  vertical-align: middle;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  -webkit-transition: background-color .2s cubic-bezier(0.4,0,0.2,1),color .2s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color .2s cubic-bezier(0.4,0,0.2,1),color .2s cubic-bezier(0.4,0,0.2,1);
+}
+
+.tinyMeBtn {
+  font-weight: 500;
+  color: #039be5;
+  background-color: white;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+  border: none;
+  border-radius: 2px;
+  position: relative;
+  height: 36px;
+  min-width: 64px;
+  padding: 0 16px;
+  display: inline-block;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0;
+  overflow: hidden;
+  will-change: box-shadow;
+  -webkit-transition: box-shadow .2s cubic-bezier(0.4,0,1,1),background-color .2s cubic-bezier(0.4,0,0.2,1),color .2s cubic-bezier(0.4,0,0.2,1);
+  transition: box-shadow .2s cubic-bezier(0.4,0,1,1),background-color .2s cubic-bezier(0.4,0,0.2,1),color .2s cubic-bezier(0.4,0,0.2,1);
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 0 0 10px;
+}
+
+.tinyMeBtn:focus:not(:active) {
+  font-weight: 500;
+  color: #039be5;
+  background-color: white;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ant-layout-header {
+  height: 80px !important;
 }

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Layout from 'antd/lib/layout';
 import axios from '../../axios';
-import Row from 'antd/lib/row';
-import Col from 'antd/lib/col';
 import Input from 'antd/lib/input';
 import ClipboardJS from 'clipboard/dist/clipboard.min';
 import Button from '../../components/Button';
@@ -48,41 +46,50 @@ class HomePage extends Component {
     return (
       <Layout>
         <Header>
-          <SiteHeader />
+          <SiteHeader/>
         </Header>
         <Content className="content">
-          <Row>
-            <Col span={24}>
-              <h3>
-                Transform your long link into tiny one :)
-              </h3>
-            </Col>
-            <Col>
-          <Input
-            name="urlInput"
-            onChange={e => this.setLongURL(e.target.value)}
-            value={this.state.longUrl}
-            placeholder="Paste your link here"
-          />
-              <Button
-                className="more"
-                onClick={this.getShortUrl}
-                text="Tiny me !!!"
-              />
-            </Col>
-            <Col span={24}>
-              <Input
-                id="foo"
-                value={this.state.shortUrl}
-              />
-              <button
-                id="copyBtn"
-                data-clipboard-target="#foo"
-              >
-                COPY
-              </button>
-            </Col>
-          </Row>
+          <div className="shorten">
+            <div className="constrain">
+              <h1>Transform your long link into tiny one :)</h1>
+              <div>
+                <Input
+                  name="urlInput"
+                  onChange={e => this.setLongURL(e.target.value)}
+                  value={this.state.longUrl}
+                  placeholder="Paste your link here"
+                  className="inputLong"
+                />
+                <Button
+                  className="tinyMeBtn"
+                  onClick={this.getShortUrl}
+                  text="Tiny me !!!"
+                />
+              </div>
+              <div className="tagline">
+                All tiny.me URLs are public and can be accessed by anyone
+              </div>
+            </div>
+          </div>
+          <div className="shortenResult">
+            <div className="constrain">
+              <h1>Your Tiny URL: </h1>
+              <div>
+                <Input
+                  id="foo"
+                  value={this.state.shortUrl}
+                  className="inputLong"
+                />
+                <button
+                  id="copyBtn"
+                  data-clipboard-target="#foo"
+                  className="tinyMeBtn"
+                >
+                  COPY
+                </button>
+              </div>
+            </div>
+          </div>
         </Content>
         <Footer>
           <SiteFooter />
