@@ -1,4 +1,4 @@
 # tiny-me
 Tiny your url
 
-Check it out at [Tiny-me](https://tiny-me.herokuapp.com)
+Check it out it's live demo at [Tiny-me](https://tiny-me.herokuapp.com)
