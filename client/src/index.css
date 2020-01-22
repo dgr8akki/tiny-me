@@ -1,6 +1,7 @@
 body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 14px;
+  background: url("./img/back.jpg") no-repeat center;
 }
 .ant-layout-header {
   background: white !important;
@@ -46,22 +47,22 @@ body {
   color: #ffffff;
 }
 
-.inputLong {
-  width: calc(100% - 32px);
-  max-width: 550px;
-  height: 36px;
-  margin-right: 20px;
-  padding: 0 16px;
-  font-family: inherit;
-  font-size: 14px;
-  line-height: 36px;
-  vertical-align: middle;
-  border: none;
-  border-radius: 2px;
-  outline: none;
-  -webkit-transition: background-color .2s cubic-bezier(0.4,0,0.2,1),color .2s cubic-bezier(0.4,0,0.2,1);
-  transition: background-color .2s cubic-bezier(0.4,0,0.2,1),color .2s cubic-bezier(0.4,0,0.2,1);
-}
+/*.inputLong {*/
+/*  width: calc(100% - 32px);*/
+/*  max-width: 550px;*/
+/*  height: 36px;*/
+/*  margin-right: 20px;*/
+/*  padding: 0 16px;*/
+/*  font-family: inherit;*/
+/*  font-size: 14px;*/
+/*  line-height: 36px;*/
+/*  vertical-align: middle;*/
+/*  border: none;*/
+/*  border-radius: 2px;*/
+/*  outline: none;*/
+/*  -webkit-transition: background-color .2s cubic-bezier(0.4,0,0.2,1),color .2s cubic-bezier(0.4,0,0.2,1);*/
+/*  transition: background-color .2s cubic-bezier(0.4,0,0.2,1),color .2s cubic-bezier(0.4,0,0.2,1);*/
+/*}*/
 
 .tinyMeBtn {
   font-weight: 500;

@@ -1,7 +1,8 @@
 import React from 'react';
 import Button from 'antd/lib/button';
+import styles from './TinyButton.module.css';
 
-const TMButton = (
+const TinyButton = (
   {
     id,
     className,
@@ -13,7 +14,7 @@ const TMButton = (
 ) => (
   <Button
     id={id || null}
-    className={className || null}
+    className={`${className || null} ${styles.button}`}
     onClick={onClick || null}
     data-clipboard-target={dataClipboardTarget || null}
   >
@@ -21,4 +22,4 @@ const TMButton = (
   </Button>
 );
 
-export default TMButton;
+export default TinyButton;

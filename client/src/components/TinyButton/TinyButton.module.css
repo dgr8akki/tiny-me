@@ -1,0 +1,19 @@
+.button {
+    padding: 5px !important;
+    font-size: 18px !important;
+    height: 55px !important;
+    background-color: #007feb !important;
+    border: 0 !important;
+    border-radius: 0 29px 29px 0 !important;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    line-height: 1.42857143;
+    user-select: none;
+}
