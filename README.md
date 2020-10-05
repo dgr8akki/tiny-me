@@ -1,5 +1,5 @@
 # tiny-me
-Tiny your url without any irritating ads, free of cost.
+Tiny your url without any irritating ads and free of cost.
 
 URL shortening is useful for text messaging and social media. Use our URL shortener to make tiny links more manageable and gather click data.
 
